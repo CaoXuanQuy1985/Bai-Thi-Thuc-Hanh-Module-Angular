@@ -1,0 +1,15 @@
+<a routerLink = "/"> < back </a>
+
+<h2>
+  Thêm Mới Sách
+</h2>
+
+<form id = "formNewProduct" name = "formNewProduct" #productData = "ngForm" (ngSubmit) = "addNewProduct(productData.value)">
+  <label>Tên Sách: </label><input type = "text" name="title" id="name" placeholder="title" ngModel><br>
+  <label>Tác Giả: </label><input type = "text" name="author" id="author" placeholder="author" ngModel><br>
+  <label>Mô Tả: </label><input type = "text" name="description" id="description" placeholder="description" ngModel><br>
+  <input type="submit" value = "Thêm">
+</form>
+
+<br>
+<h3 *ngIf = "isAdded" >{{confirmationString}}</h3>

@@ -1,0 +1,22 @@
+<div class="container-fluid">
+<button routerLink = '/book' class="float-right"> Thêm Sách Vào Thư Viện</button>
+
+<h1 class="text-center mt-5">
+  Thư Viện
+</h1>
+
+<table class="table table-bordered mt-5">
+  <th>STT</th>
+  <th>Tên Sách</th>
+  <th>Tác Giả</th>
+  <th></th>
+  <th></th>
+  <tr *ngFor = "let book of books">
+    <td>{{book.id}}</td>
+    <td><a [routerLink] = "['/detailBook', book.id]">{{book.title}}</a></td>
+    <td>{{book.author}}</td>
+    <td><button (click) = "deleteProduct(book.id)" class="float-right">XÓA  </button></td>
+    <td><button [routerLink] = "['/updateBook', book.id]" class="float-right">CẬP NHẬT</button></td>
+  </tr>
+</table>
+</div>

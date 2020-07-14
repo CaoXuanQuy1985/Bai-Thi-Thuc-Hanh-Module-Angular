@@ -1,0 +1,14 @@
+<h2>
+  Chi Tiết Sách
+</h2>
+
+<p *ngIf = "!exist">
+  Product doesn't exist
+</p>
+
+<label>Tên Sách: </label><p type="text" name="name" id="name" placeholder="name">{{ data.title }}</p>
+<br>
+<label>Tác Giả: </label><p type="text" name="author" id="author" placeholder="color">{{ data.author }}</p><br>
+<label>Mô Tả: </label><p type="text" name="author" id="author" placeholder="color">{{ data.description }}</p><br>
+<br>
+<button routerLink="/books">Quay về thư viện</button>
